@@ -5,11 +5,39 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- I need to put this snippet into ./flats/components/navbar -->
+    <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon px-4">
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= image_tag "https://www.givingtuesday.org/sites/default/files/2019-04/GivingTuesday%20white%20heart.png" %>
+      <% end %>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Appartments", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/toto", class: "avatar dropdown-toggle" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

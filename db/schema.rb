@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2019_08_10_122441) do
     t.string "name"
     t.string "address"
     t.text "description"
+    t.string "image_url"
+    t.string "avatar_url"
     t.integer "price_per_night"
     t.integer "number_of_guests"
     t.datetime "created_at", null: false

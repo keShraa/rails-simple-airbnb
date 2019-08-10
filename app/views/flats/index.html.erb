@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="mt-4">All our Flats</h1>
+  <p class="mb-4">you searched for. We found 5 flats out of our 5 on our website.</p>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="card-trip">
+        <%= image_tag flat.image_url, alt: "Flat image" %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= flat.name %></h2>
+            <hr>
+            <p><%= flat.address %></p>
+          </div>
+          <h3 class="card-trip-pricing">
+            <%= flat.price_per_night %> <i class="fas fa-euro-sign mr-4"></i>
+            <%= flat.number_of_guests %> <i class="fas fa-users"></i>
+          </h3>
+          <%= image_tag flat.avatar_url, alt: "Avatar owner", class:"card-trip-user avatar-bordered" %>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <%= link_to 'Book this flat', '#', class:"btn btn-ghost" %>
+          <%= link_to 'Delete this flat', flat_path(flat), class:"btn btn-ghost-red" %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
