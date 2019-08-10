@@ -14,7 +14,7 @@
   <body>
     <!-- I need to put this snippet into ./flats/components/navbar -->
     <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon px-4">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to home_path, class: "navbar-brand" do %>
         <%= image_tag "https://www.givingtuesday.org/sites/default/files/2019-04/GivingTuesday%20white%20heart.png" %>
       <% end %>
 
@@ -26,10 +26,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", home_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Appartments", "#", class: "nav-link" %>
+            <%= link_to "Appartments", flats_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Add a flat", new_flat_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/toto", class: "avatar dropdown-toggle" %>

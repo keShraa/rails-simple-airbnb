@@ -12,6 +12,7 @@
 .btn-ghost:hover {
   opacity: 1;
 }
+
 .btn-ghost-red {
   color: #FD0F15;
   border: 1px solid #FD0F15;
@@ -25,4 +26,19 @@
 
 .btn-ghost-red:hover {
   opacity: 1;
+}
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
 }

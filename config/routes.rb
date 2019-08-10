@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :flats
 
+  get '/home', to: 'flats#home', as: :home
+
   # get     '/flats',           to: 'flats#index', as: :flats
   # post    '/flats',           to: 'flats#create'
   # get     '/flats/new',       to: 'flats#new', as: :flats_new
