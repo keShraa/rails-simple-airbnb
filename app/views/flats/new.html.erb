@@ -1,14 +1,17 @@
-<div class="container">
-  <div class="jumbotron pt-0">
-    <h2 class="py-4">Add a new appartment</h2>
-    <%= simple_form_for @flat do |f| %>
-      <%= f.input :name %>
-      <%= f.input :address %>
-      <%= f.input :description %>
-      <%= f.input :image_url %>
-      <%= f.input :price_per_night, input_html: { min: '0', step: 'any' } %>
-      <%= f.input :number_of_guests, input_html: { min: '0', step: 'any' } %>
-      <%= f.button :submit, class:"btn btn-gradient" %>
-    <% end %>
+<div class="form">
+  <div class="container"> <br>
+    <div class="form-new">
+      <h2>Add a new appartment</h2>
+      <%= simple_form_for @flat do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <%= f.input :image_url %>
+        <%= f.input :price_per_night, input_html: { min: '0', step: 'any' } %>
+        <%= f.input :number_of_guests, input_html: { min: '0', step: 'any' } %>
+        <%= f.button :submit, class:"btn btn-gradient" %>
+      <% end %>
+    </div>
   </div>
 </div>
+
