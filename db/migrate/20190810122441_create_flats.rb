@@ -5,7 +5,7 @@ class CreateFlats < ActiveRecord::Migration[5.2]
       t.string :address
       t.text :description
       t.string :image_url
-      t.string :avatar_url
+      t.string :avatar_url, default: 'https://kitt.lewagon.com/placeholder/users/toto'
       t.integer :price_per_night
       t.integer :number_of_guests
 

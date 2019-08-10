@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'flats#home', as: :home
+
   resources :flats
 
-  get '/home', to: 'flats#home', as: :home
 
   # get     '/flats',           to: 'flats#index', as: :flats
   # post    '/flats',           to: 'flats#create'
