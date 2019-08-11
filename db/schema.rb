@@ -13,18 +13,17 @@
 ActiveRecord::Schema.define(version: 2019_08_10_122441) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "flats", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.text "description"
-    t.string "image_url"
-    t.string "avatar_url", default: "https://kitt.lewagon.com/placeholder/users/toto"
-    t.integer "price_per_night"
-    t.integer "number_of_guests"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'flats', force: :cascade do |t|
+    t.string 'name'
+    t.string 'address'
+    t.text 'description'
+    t.string 'image_url'
+    t.string 'avatar_url', default: 'https://kitt.lewagon.com/placeholder/users/toto'
+    t.integer 'price_per_night'
+    t.integer 'number_of_guests'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end
